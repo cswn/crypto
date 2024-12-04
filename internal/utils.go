@@ -42,7 +42,7 @@ func EncodeBase64(src []byte) []byte {
 
 func XORCombinationTwoEqualLengthBuffers(b1 []byte, b2 []byte) ([]byte, error) {
 	if len(b1) != len(b2) {
-		return nil, errors.New("the inputs have mismatched lengths")
+		return nil, errors.New("the buffers have mismatched lengths")
 	}
 
 	db1, err := DecodeHex(b1)
@@ -61,7 +61,11 @@ func XORCombinationTwoEqualLengthBuffers(b1 []byte, b2 []byte) ([]byte, error) {
 
 	xc := make([]byte, len(b1))
 	for i := 0; i < len(b1); i++ {
-		xc[i] = b1[i] ^ b2[i]
+		xc[i] = XORCipher(b1[i], b2[i])
 	}
 	return EncodeHex(xc), nil
+}
+
+func XORCipher(b1 byte, b2 byte) byte {
+	return b1 ^ b2
 }
