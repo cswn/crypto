@@ -66,10 +66,10 @@ func XORCombinationTwoEqualLengthBuffers(b1 []byte, b2 []byte) ([]byte, error) {
 	return EncodeHex(xc), nil
 }
 
-func XORCipher(bytes []byte, b2 byte) []byte {
-	xc := make([]byte, len(bytes))
-	for i := 0; i < len(bytes); i++ {
-		xc[i] = bytes[i] ^ b2
+func XORCipher(bytes []byte, key byte) []byte {
+	result := make([]byte, len(bytes))
+	for i := range len(bytes) {
+		result[i] = bytes[i] ^ key
 	}
-	return xc
+	return result
 }

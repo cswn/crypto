@@ -12,10 +12,10 @@ func main() {
 	//fmt.Printf("%s", base64String)
 
 	// challenge 2
-	bufferString1 := []byte("1c0111001f010100061a024b53535009181c")
-	bufferString2 := []byte("686974207468652062756c6c277320657965")
-	xc, _ := internal.XORCombinationTwoEqualLengthBuffers(bufferString1, bufferString2)
-	fmt.Printf("%s", xc)
+	// bufferString1 := []byte("1c0111001f010100061a024b53535009181c")
+	// bufferString2 := []byte("686974207468652062756c6c277320657965")
+	// xc, _ := internal.XORCombinationTwoEqualLengthBuffers(bufferString1, bufferString2)
+	// fmt.Printf("%s", xc)
 
 	// challenge 3
 	hexString := []byte("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736")
