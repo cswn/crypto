@@ -73,3 +73,7 @@ func XORCipher(bytes []byte, key byte) []byte {
 	}
 	return result
 }
+
+func XORCipherByByte(b byte, key byte) byte {
+	return b ^ key
+}
