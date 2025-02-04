@@ -18,7 +18,11 @@ func main() {
 	// fmt.Printf("%s", xc)
 
 	// challenge 3
-	hexString := []byte("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736")
-	dc, _ := internal.DecryptSingleByteXorCipher(hexString)
-	fmt.Printf("%s", dc)
+	// hexString := []byte("1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736")
+	// dc, _ := internal.DecryptSingleByteXorCipher(hexString)
+	// fmt.Printf("%s", dc)
+
+	// challenge 4
+	result := internal.DetectSingleByteXorFromMultipleStrings("data/4.txt")
+	fmt.Printf("%s", result)
 }
